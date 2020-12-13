@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title></title>
+	<script>
+		function add()
+		{
+		var a=parseInt(document.getElementById("txt1").value,10);
+        var b=parseInt(document.getElementById("txt2").value,10);
+        var c= a + b;
+        document.getElementById("res1").value= c;
+         }
+         function substract()
+		{
+		var a=parseInt(document.getElementById("txt1").value,10);
+        var b=parseInt(document.getElementById("txt2").value,10);
+        var c= a - b;
+        document.getElementById("res1").value= c;
+
+         }
+         function multiply()
+		{
+		var a=parseInt(document.getElementById("txt1").value,10);
+        var b=parseInt(document.getElementById("txt2").value,10);
+        var c= a * b;
+        document.getElementById("res1").value= c;
+         }
+         function divide()
+		{
+		var a=parseInt(document.getElementById("txt1").value,10);
+        var b=parseInt(document.getElementById("txt2").value,10);
+        var c= a / b;
+        document.getElementById("res1").value= c;
+         }
+         function CtoF()
+        {
+        var a=parseInt(document.getElementById("txt3").value,10);
+        var c= a*9/5+32;
+
+        document.getElementById("res").value= c;
+         }
+         function FtoC()
+        {
+        var a=parseInt(document.getElementById("txt3").value,10);
+        var c= (a - 32) * 5 / 9;
+
+        document.getElementById("res").value= c;
+         }
+	</script>
+</head>
+<body style="background-color: cyan">
+<center><h1>Simple Calculator</h1></center>
+<center><form action="/action_page.php" method="get">
+     First Number : <input type="text" id="txt1" style="background-color: lightblue"><br><br>
+     Second Number: <input type="text" id="txt2" style="background-color: lightblue"><br><br>
+     Result : <input type="text" id="res1" style="background-color: lightblue"><br><br>
+     write your name: <input type="text" style="background-color: lightblue"><br><br>
+	<input type="button" value="+" onclick="add()" style="background-color: yellow" >&nbsp;&nbsp;&nbsp;
+	<input type="button" value="-" onclick="substract()" style="background-color: yellow">&nbsp;&nbsp;&nbsp;
+	<input type="button" value="*" onclick="multiply()" style="background-color: yellow">&nbsp;&nbsp;&nbsp;
+	<input type="button" value="/" onclick="divide()" style="background-color: yellow">&nbsp;&nbsp;&nbsp;
+	<input type="reset" value="C" style="background-color: yellow">
+</form></center>
+<hr><hr>
+<center><h1>Temperature Converter</h1></center>
+<center><form >
+     Enter Temperature : <input type="text" id="txt3" style="background-color: lightblue"><br><br>
+     Result : <input type="text" id="res" style="background-color: lightblue"><br><br>
+	<input type="button" value="C to F" onclick="CtoF()" style="background-color: lime">&nbsp;&nbsp;&nbsp;
+	<input type="button" value="F to C" onclick="FtoC()" style="background-color: lime">&nbsp;&nbsp;&nbsp;
+	<input type="reset" value="Reset" style="background-color: lime">
+</form></center>
+</body>
+</html>
